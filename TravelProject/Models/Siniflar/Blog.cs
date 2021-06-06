@@ -14,5 +14,6 @@ namespace TravelProject.Models.Siniflar
         public DateTime Tarih { get; set; }
         public string Aciklama { get; set; }
         public string FotoUrl { get; set; }
+        public ICollection<Yorumlar> Yorumlars { get; set; }
     }
 }
