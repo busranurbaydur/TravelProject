@@ -4,15 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Travel.Controllers
+namespace TravelProject.Controllers
 {
-    public class DefaultController : Controller
+    public class BlogController : Controller
     {
-        // GET: Default
+        // GET: Blog
         public ActionResult Index()
         {
             return View();
         }
-
     }
 }
