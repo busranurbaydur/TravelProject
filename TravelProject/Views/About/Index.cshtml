@@ -10,10 +10,11 @@
         <div class="about">
             <h3>Hakkımızda</h3>
 
-            <img src="~/web/images/about_banner.jpg" alt="" />
+
 
             @foreach (var x in Model)
             {
+                <img src="@x.FotoUrl" alt=""  style="width:600px; height:300px"/>
                 <p> @x.Aciklama</p>
             }
         </div>
