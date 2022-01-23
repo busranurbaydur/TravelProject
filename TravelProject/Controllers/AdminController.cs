@@ -60,5 +60,39 @@ namespace TravelProject.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult YorumListesi()
+        {
+            var yorumlar = c.Yorumlars.ToList();
+            return View(yorumlar);
+        }
+
+        public ActionResult YorumSil(int id)
+        {
+
+            var b = c.Yorumlars.Find(id);
+            c.Yorumlars.Remove(b);
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
+
+        }
+
+        public ActionResult YorumGetir(int id)
+        {
+            var yorum = c.Yorumlars.Find(id);
+            return View("YorumGetir", yorum);
+        }
+
+        public ActionResult YorumGuncelle(Yorumlar y)
+        {
+            var yorum = c.Yorumlars.Find(y.Id);
+            yorum.KullaniciAdi = y.KullaniciAdi;
+            yorum.Email = y.Email;
+            yorum.Yorum = y.Yorum;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+
+            
+        }
     }
 }
