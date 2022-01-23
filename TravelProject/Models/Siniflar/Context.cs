@@ -12,7 +12,7 @@ namespace TravelProject.Models.Siniflar
 
         public Context()
         {
-            Database.Connection.ConnectionString = @"Data Source=Dell;Initial Catalog=TravelProjectDb;Integrated Security=true;";
+            Database.Connection.ConnectionString = @"Data Source=DESKTOP-UAJDS2G;Initial Catalog=TravelProjectDb;Integrated Security=true;";
         }
 
         public DbSet<Admin> Admins { get; set; }
