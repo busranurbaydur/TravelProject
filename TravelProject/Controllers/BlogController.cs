@@ -13,6 +13,7 @@ namespace TravelProject.Controllers
         Context c = new Context();
         BlogYorum by = new BlogYorum();
 
+        [Authorize]
         public ActionResult Index()
         {
             //var bloglar = c.Blogs.ToList();

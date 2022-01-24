@@ -12,7 +12,7 @@ namespace TravelProject.Controllers
         // GET: Admin
         Context c = new Context();
 
-      
+        [Authorize]
         public ActionResult Index()
         {
             var degerler = c.Blogs.ToList();
@@ -96,5 +96,35 @@ namespace TravelProject.Controllers
 
             
         }
+
+        public ActionResult HakkimizdaListele()
+        {
+            var hakkimizda = c.Hakkimizdas.ToList();
+            return View(hakkimizda);
+        }
+
+        public ActionResult HakkimizdaSil(int id)
+        {
+            var hakkimizda = c.Hakkimizdas.Find(id);
+            c.Hakkimizdas.Remove(hakkimizda);
+            c.SaveChanges();
+            return RedirectToAction("HakkimizdaListele");
+        }
+        public ActionResult HakkimizdaGetir(int id)
+        {
+            var aciklama = c.Hakkimizdas.Find(id);
+            return View("HakkimizdaGetir", aciklama);
+        }
+        public ActionResult HakkimizdaGuncelle(Hakkimizda h)
+        {
+            var hakkimizda = c.Hakkimizdas.Find(h.Id);
+            hakkimizda.FotoUrl = h.FotoUrl;
+            hakkimizda.Aciklama = h.Aciklama;
+            c.SaveChanges();
+            return RedirectToAction("HakkimizdaListele");
+
+        }
+
+
     }
 }

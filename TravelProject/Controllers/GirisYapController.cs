@@ -12,6 +12,8 @@ namespace TravelProject.Controllers
     {
         Context c = new Context();
         // GET: GirisYap
+
+
         public ActionResult Index()
         {
             return View();
