@@ -11,10 +11,12 @@ namespace TravelProject.Controllers
     {
         // GET: Admin
         Context c = new Context();
+
+      
         public ActionResult Index()
         {
-            var result = c.Blogs.ToList();
-            return View(result);
+            var degerler = c.Blogs.ToList();
+            return View(degerler);
         }
 
         [HttpGet]
@@ -60,7 +62,7 @@ namespace TravelProject.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize]
         public ActionResult YorumListesi()
         {
             var yorumlar = c.Yorumlars.ToList();
