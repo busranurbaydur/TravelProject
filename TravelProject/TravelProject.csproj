@@ -134,12 +134,35 @@
     <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IletisimController.cs" />
+    <Compile Include="Controllers\MuzelerController.cs" />
+    <Compile Include="Controllers\OtellerController.cs" />
+    <Compile Include="Controllers\RestoranlarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202201231451562_initdb.cs" />
     <Compile Include="Migrations\202201231451562_initdb.designer.cs">
       <DependentUpon>202201231451562_initdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201261948291_OtelDatabaseAdd.cs" />
+    <Compile Include="Migrations\202201261948291_OtelDatabaseAdd.designer.cs">
+      <DependentUpon>202201261948291_OtelDatabaseAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201261951285_otel.cs" />
+    <Compile Include="Migrations\202201261951285_otel.designer.cs">
+      <DependentUpon>202201261951285_otel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201261952502_UpdateOtel.cs" />
+    <Compile Include="Migrations\202201261952502_UpdateOtel.designer.cs">
+      <DependentUpon>202201261952502_UpdateOtel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201262016097_fotoadded.cs" />
+    <Compile Include="Migrations\202201262016097_fotoadded.designer.cs">
+      <DependentUpon>202201262016097_fotoadded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201262042411_MuseumAndRestorantDatabasesAdded.cs" />
+    <Compile Include="Migrations\202201262042411_MuseumAndRestorantDatabasesAdded.designer.cs">
+      <DependentUpon>202201262042411_MuseumAndRestorantDatabasesAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Siniflar\Admin.cs" />
@@ -150,6 +173,9 @@
     <Compile Include="Models\Siniflar\Context.cs" />
     <Compile Include="Models\Siniflar\Hakkimizda.cs" />
     <Compile Include="Models\Siniflar\Iletisim.cs" />
+    <Compile Include="Models\Siniflar\Muze.cs" />
+    <Compile Include="Models\Siniflar\Otel.cs" />
+    <Compile Include="Models\Siniflar\Restoran.cs" />
     <Compile Include="Models\Siniflar\Yorumlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -290,6 +316,12 @@
     <Content Include="Views\Admin\HakkimizdaGetir.cshtml" />
     <Content Include="Views\Iletisim\MesajGonder.cshtml" />
     <Content Include="Views\Admin\MesajListele.cshtml" />
+    <Content Include="Views\Oteller\Index.cshtml" />
+    <Content Include="Views\Muzeler\Index.cshtml" />
+    <Content Include="Views\Restoranlar\Index.cshtml" />
+    <Content Include="Views\Admin\OtelListele.cshtml" />
+    <Content Include="Views\Admin\MuzeListele.cshtml" />
+    <Content Include="Views\Admin\RestoranListele.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -310,6 +342,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202201231451562_initdb.resx">
       <DependentUpon>202201231451562_initdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201261948291_OtelDatabaseAdd.resx">
+      <DependentUpon>202201261948291_OtelDatabaseAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201261951285_otel.resx">
+      <DependentUpon>202201261951285_otel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201261952502_UpdateOtel.resx">
+      <DependentUpon>202201261952502_UpdateOtel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201262016097_fotoadded.resx">
+      <DependentUpon>202201262016097_fotoadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201262042411_MuseumAndRestorantDatabasesAdded.resx">
+      <DependentUpon>202201262042411_MuseumAndRestorantDatabasesAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

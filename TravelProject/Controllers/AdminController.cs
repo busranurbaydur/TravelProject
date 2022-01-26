@@ -131,7 +131,20 @@ namespace TravelProject.Controllers
             return View(mesaj);
         }
 
-        
-
+        public ActionResult OtelListele()
+        {
+            var otel = c.Otels.ToList();
+            return View(otel);
+        }
+        public ActionResult MuzeListele()
+        {
+            var muze = c.Muzes.ToList();
+            return View(muze);
+        }
+        public ActionResult RestoranListele()
+        {
+            var restoran = c.Restorans.ToList();
+            return View(restoran);
+        }
     }
 }

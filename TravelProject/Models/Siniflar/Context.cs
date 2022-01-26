@@ -21,5 +21,8 @@ namespace TravelProject.Models.Siniflar
         public DbSet<Hakkimizda> Hakkimizdas { get; set; }
         public DbSet<Iletisim> Iletisims { get; set; }
         public DbSet<Yorumlar> Yorumlars { get; set; } 
+        public DbSet<Otel> Otels { get; set; } 
+        public DbSet<Muze> Muzes { get; set; } 
+        public DbSet<Restoran> Restorans { get; set; } 
     }
 }

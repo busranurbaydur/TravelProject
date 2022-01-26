@@ -1,0 +1,32 @@
+﻿@using TravelProject.Models.Siniflar
+@model List<Otel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<h2>OTELLER</h2>
+
+<div class="single">
+    <div class="container">
+
+        <div class="col-md-8 single-main">
+            @foreach (var x in Model)
+            {
+                <div class="single-grid">
+                    <h2><p>@x.Adi Otel</p></h2>
+                    <img src="@x.FotoUrl" style="height:130px;" />
+                    <p>Yeri :  @x.Adresi</p>
+                    <p>Özellikleri : @x.Ozellikleri</p>
+                </div>
+            }
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+
+
