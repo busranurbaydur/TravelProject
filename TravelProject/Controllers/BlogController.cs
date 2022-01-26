@@ -12,6 +12,7 @@ namespace TravelProject.Controllers
         // GET: Blog
         Context c = new Context();
         BlogYorum by = new BlogYorum();
+        
 
         [Authorize]
         public ActionResult Index()
@@ -20,6 +21,7 @@ namespace TravelProject.Controllers
             by.Deger1 = c.Blogs.ToList();
             by.Deger3 = c.Blogs.Take(3).ToList();
             by.Deger2 = c.Yorumlars.Take(3).ToList();
+            
             return View(by);
         }
 
@@ -30,6 +32,7 @@ namespace TravelProject.Controllers
             //var blogbul = c.Blogs.Where(x=> x.Id==id).ToList();
             by.Deger1 = c.Blogs.Where(x => x.Id == id).ToList();
             by.Deger2 = c.Yorumlars.Where(x => x.BlogId == id).ToList();
+           
             return View(by);
         }
 
@@ -49,5 +52,6 @@ namespace TravelProject.Controllers
             return PartialView();
 
         }
+
     }
 }
