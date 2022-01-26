@@ -16,5 +16,23 @@ namespace TravelProject.Controllers
             var result = c.Iletisims.ToList();
             return View(result);
         }
+
+
+        [HttpGet]
+        public PartialViewResult MesajGonder()
+        {
+           
+            return PartialView();
+
+        }
+
+        [HttpPost]
+        public PartialViewResult MesajGonder(Iletisim iletisim)
+        {
+            c.Iletisims.Add(iletisim);
+            c.SaveChanges();
+            return PartialView();
+
+        }
     }
 }

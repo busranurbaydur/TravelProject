@@ -125,6 +125,13 @@ namespace TravelProject.Controllers
 
         }
 
+        public ActionResult MesajListele()
+        {
+            var mesaj = c.Iletisims.ToList();
+            return View(mesaj);
+        }
+
+        
 
     }
 }

@@ -1,9 +1,24 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
 }
 
+
 <h2>Iletisim</h2>
 
-Lütfen bizimle irtibata geçiniz...
+<p>Gezi Blogu Ltd. Şti.</p>
+<br />
+<p> Ayazağa Mahallesi, Sarıyer – İSTANBUL</p>
+<p>Telefon : +90  535 222 22 22</p>
+<p> Fax : +90 212 222 22 22</p>
+<p>E-Mail : info@info.com</p>
+
+
+<br />
+<br />
+<p>Lütfen Bizimle İletişime Geçiniz..</p>
+<div class="col-md-8 single-main">
+
+    @Html.Action("MesajGonder", "Iletisim")
+
+</div>
