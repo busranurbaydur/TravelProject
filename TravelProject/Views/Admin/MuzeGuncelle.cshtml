@@ -1,0 +1,31 @@
+﻿@model TravelProject.Models.Siniflar.Muze
+@{
+    ViewBag.Title = "MuzeGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Muze Guncelle</h2>
+
+<br />
+@using (Html.BeginForm("MuzeGuncelle", "Admin", FormMethod.Post))
+{
+
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Adi)
+    @Html.TextBoxFor(x => x.Adi, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.Adresi)
+    @Html.TextBoxFor(x => x.Adresi, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.FotoUrl)
+    @Html.TextBoxFor(x => x.FotoUrl, new { @class = "form-control" })
+    <br />
+
+  
+
+    <button class=" btn btn-success">Güncelle</button>
+}

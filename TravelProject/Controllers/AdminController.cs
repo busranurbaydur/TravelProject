@@ -22,7 +22,6 @@ namespace TravelProject.Controllers
         [HttpGet]
         public ActionResult YeniBlog()
         {
-            
             return View();
         }
 
@@ -92,7 +91,7 @@ namespace TravelProject.Controllers
             yorum.Email = y.Email;
             yorum.Yorum = y.Yorum;
             c.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("YorumListesi");
 
             
         }
@@ -136,15 +135,146 @@ namespace TravelProject.Controllers
             var otel = c.Otels.ToList();
             return View(otel);
         }
+
+        [HttpGet]
+        public ActionResult OtelEkle()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult OtelEkle(Otel otel)
+        {
+            c.Otels.Add(otel);
+            c.SaveChanges();
+            return RedirectToAction("OtelListele");
+
+        }
+
+        public ActionResult OtelSil(int id)
+        {
+            var otel = c.Otels.Find(id);
+            c.Otels.Remove(otel);
+            c.SaveChanges();
+            return RedirectToAction("OtelListele");
+        }
+
+        [HttpGet]
+        public ActionResult OtelGuncelle(int id)
+        {
+            var otel = c.Otels.Find(id);
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult OtelGuncelle(Otel otel)
+        {
+            var otl = c.Otels.FirstOrDefault(x => x.Id == otel.Id);
+
+            otl.Adi = otel.Adi;
+            otl.Adresi = otel.Adresi;
+            otl.FotoUrl = otel.FotoUrl;
+            otl.Ozellikleri = otel.Ozellikleri;
+            c.SaveChanges();
+            return RedirectToAction("OtelListele");
+        }
+
         public ActionResult MuzeListele()
         {
             var muze = c.Muzes.ToList();
             return View(muze);
         }
+
+        [HttpGet]
+        public ActionResult MuzeEkle()
+        {
+            return View();
+
+        }
+
+        [HttpPost]
+        public ActionResult MuzeEkle(Muze muze)
+        {
+            c.Muzes.Add(muze);
+            c.SaveChanges();
+            return RedirectToAction("MuzeListele");
+        }
+
+        public ActionResult MuzeSil(int id)
+        {
+            var muze = c.Muzes.Find(id);
+            c.Muzes.Remove(muze);
+            c.SaveChanges();
+            return RedirectToAction("MuzeListele");
+
+        }
+        [HttpGet]
+        public ActionResult MuzeGuncelle(int id)
+        {
+            var muze = c.Muzes.Find(id);
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult MuzeGuncelle(Muze muze)
+        {
+            var guncellenecekMuze = c.Muzes.FirstOrDefault(x => x.Id == muze.Id);
+            guncellenecekMuze.Adi = muze.Adi;
+            guncellenecekMuze.Adresi = muze.Adresi;
+            guncellenecekMuze.FotoUrl = muze.FotoUrl;
+            c.SaveChanges();
+            return RedirectToAction("MuzeListele");
+            
+        }
+
+
         public ActionResult RestoranListele()
         {
             var restoran = c.Restorans.ToList();
             return View(restoran);
         }
+
+        [HttpGet]
+        public ActionResult RestoranEkle()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult RestoranEkle(Restoran restoran)
+        {
+            c.Restorans.Add(restoran);
+            c.SaveChanges();
+            return RedirectToAction("RestoranListele");
+        }
+
+        public ActionResult RestoranSil(int id)
+        {
+            var restoran = c.Restorans.Find(id);
+            c.Restorans.Remove(restoran);
+            c.SaveChanges();
+            return RedirectToAction("RestoranListele");
+
+        }
+        [HttpGet]
+        public ActionResult RestoranGuncelle(int id)
+        {
+            var restoran = c.Restorans.Find(id);
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult RestoranGuncelle(Restoran restoran)
+        {
+            var guncellenecekRestoran = c.Restorans.Find(restoran.Id);
+            guncellenecekRestoran.Adi = restoran.Adi;
+            guncellenecekRestoran.Adresi = restoran.Adresi;
+            guncellenecekRestoran.FotoUrl = restoran.FotoUrl;
+            guncellenecekRestoran.YemekCesidi = restoran.YemekCesidi;
+            c.SaveChanges();
+            return RedirectToAction("RestoranListele");
+
+        }
+
     }
 }
