@@ -305,7 +305,6 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\YeniBlog.cshtml" />
-    <Content Include="Views\Admin\BlogGetir.cshtml" />
     <Content Include="Views\Blog\YorumYap.cshtml" />
     <Content Include="Views\Admin\YorumListesi.cshtml" />
     <Content Include="Views\Admin\YorumGetir.cshtml" />
@@ -328,6 +327,7 @@
     <Content Include="Views\Admin\RestoranEkle.cshtml" />
     <Content Include="Views\Admin\MuzeGuncelle.cshtml" />
     <Content Include="Views\Admin\RestoranGuncelle.cshtml" />
+    <Content Include="Views\Admin\BlogGuncelle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

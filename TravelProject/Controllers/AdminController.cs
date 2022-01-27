@@ -43,20 +43,21 @@ namespace TravelProject.Controllers
 
         }
 
-        public ActionResult BlogGetir(int id)
+        [HttpGet]
+        public ActionResult BlogGuncelle(int id)
         {
-            var bl = c.Blogs.Find(id);
-            return View("BlogGetir", bl);
+            var blg = c.Blogs.Find(id);
+            return View("BlogGuncelle", blg);
         }
 
-
+        [HttpPost]
         public ActionResult BlogGuncelle(Blog b)
         {
-            var blog = c.Blogs.Find(b.Id);
-            blog.Aciklama = b.Aciklama;
-            blog.Baslik = b.Baslik;
-            blog.FotoUrl = b.FotoUrl;
-            blog.Tarih = b.Tarih;
+            var blg = c.Blogs.Find(b.Id);
+            blg.Aciklama = b.Aciklama;
+            blg.Baslik = b.Baslik;
+            blg.FotoUrl = b.FotoUrl;
+            blg.Tarih = b.Tarih;
 
             c.SaveChanges();
             return RedirectToAction("Index");
@@ -163,7 +164,7 @@ namespace TravelProject.Controllers
         public ActionResult OtelGuncelle(int id)
         {
             var otel = c.Otels.Find(id);
-            return View();
+            return View("OtelGuncelle",otel);
         }
 
         [HttpPost]
@@ -212,7 +213,7 @@ namespace TravelProject.Controllers
         public ActionResult MuzeGuncelle(int id)
         {
             var muze = c.Muzes.Find(id);
-            return View();
+            return View("MuzeGuncelle",muze);
         }
 
         [HttpPost]
