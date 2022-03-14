@@ -11,7 +11,6 @@ MVC Project
 <img src="https://github.com/busranurbaydur/TravelProject/blob/master/TravelProject/ProjectFiles/Hakkimizda.png"/>
 <img src="https://github.com/busranurbaydur/TravelProject/blob/master/TravelProject/ProjectFiles/Iletisim.png"/>
 <img src="https://github.com/busranurbaydur/TravelProject/blob/master/TravelProject/ProjectFiles/Muzeler.png"/>
-<img src="https://github.com/busranurbaydur/TravelProject/blob/master/TravelProject/ProjectFiles/Muzeler.png"/>
 <img src="https://github.com/busranurbaydur/TravelProject/blob/master/TravelProject/ProjectFiles/Oteller.png"/>
 <img src="https://github.com/busranurbaydur/TravelProject/blob/master/TravelProject/ProjectFiles/Restoranlar.png"/>
     <br/>
