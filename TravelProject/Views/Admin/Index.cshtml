@@ -8,13 +8,19 @@
 
 <h2>Bloglar</h2>
 <br />
+
+<a href="/Admin/YeniBlog" class=" btn btn-success">Yeni Blog Ekle</a>
+
+<br />
+<br />
+
 <table class=" table table-bordered">
     <tr>
         <th>Id </th>
         <th>Başlık </th>
         <th>Sil </th>
         <th>Güncelle </th>
-        
+
     </tr>
 
 
@@ -24,14 +30,13 @@
 
             <td>@x.Id</td>
             <td>@x.Baslik </td>
-            <td > <a href="/Admin/BlogSil/@x.Id" class="btn btn-danger">Sil </a> </td>
+            <td> <a href="/Admin/BlogSil/@x.Id" class="btn btn-danger">Sil </a> </td>
             <td><a href="/Admin/BlogGuncelle/@x.Id" class="btn btn-success">Güncelle</a> </td>
-           
+
 
         </tr>
 
     }
-    </table>
+</table>
 
-<a href="/Admin/YeniBlog" class=" btn btn-success">Yeni Blog Ekle</a>
 
